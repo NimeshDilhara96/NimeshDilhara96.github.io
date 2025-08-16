@@ -724,6 +724,11 @@ body {
   line-height: 1.7;
 }
 
+.about-content .section-title {
+  text-align: center;
+  width: 100%;
+}
+
 .about-list {
   list-style: none;
   padding: 0;
