@@ -486,8 +486,9 @@ body {
     background: rgba(248, 250, 252, 0.95);
     backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: var(--spacing-xl);
-    gap: var(--spacing-md);
+    /* Reduced padding and gap for compactness */
+    padding: var(--spacing-md) 0;
+    gap: var(--spacing-sm);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
