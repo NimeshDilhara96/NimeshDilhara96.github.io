@@ -1,19 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio - Nimesh Dilhara</title>
-  <style>
-    body { font-family: Arial, sans-serif; text-align: center; background: #f0f0f0; }
-    h1 { color: #333; }
-    .card { background: white; padding: 20px; margin: 50px auto; max-width: 500px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nimesh Dilhara | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="card">
-    <h1>Hi, I'm Nimesh 👋</h1>
-    <p>Undergraduate Software Engineer | Web & AI Enthusiast</p>
-    <a href="https://github.com/NimeshDilhara">My GitHub</a> | 
-    <a href="mailto:yourmail@gmail.com">Contact Me</a>
-  </div>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">Nimesh Dilhara</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <h1>Hello, I'm Nimesh 👋</h1>
+    <p>Software Engineer | Web & AI Enthusiast</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am an undergraduate software engineer passionate about web development and AI projects. I love building innovative solutions.</p>
+    <h3>Skills</h3>
+    <ul class="skills">
+      <li>HTML/CSS/JS</li>
+      <li>React & MERN Stack</li>
+      <li>AI & Machine Learning</li>
+      <li>PHP & MySQL</li>
+    </ul>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="images/project1.png" alt="Project 1">
+        <h3>NextGen Sports Club</h3>
+        <p>Advanced sports management platform using MERN stack.</p>
+        <a href="https://github.com/NimeshDilhara/NextgensportclubSystem" target="_blank">GitHub</a>
+      </div>
+      <!-- Add more project cards -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:nimesh@example.com">nimesh@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/nimeshdilhara" target="_blank">linkedin.com/in/nimeshdilhara</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Nimesh Dilhara. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
