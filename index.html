@@ -3,66 +3,367 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nimesh Dilhara | Portfolio</title>
+  <title>Nimesh Dilhara | Full Stack Developer</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation -->
-  <nav>
-    <div class="logo">Nimesh Dilhara</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <span class="logo-text">Nimesh</span>
+        <span class="logo-dot">.</span>
+      </div>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
   </nav>
 
   <!-- Home Section -->
-  <section id="home">
-    <h1>Hello, I'm Nimesh 👋</h1>
-    <p>Software Engineer | Web & AI Enthusiast</p>
-    <a href="#projects" class="btn">View My Work</a>
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <p class="hero-greeting">Hello, I'm</p>
+          <h1 class="hero-name">Nimesh Dilhara</h1>
+          <div class="hero-title">
+            <span class="typed-text"></span>
+            <span class="cursor">&nbsp;</span>
+          </div>
+          <p class="hero-description">
+            Passionate full-stack developer specializing in modern web technologies and AI solutions. 
+            I create digital experiences that combine beautiful design with powerful functionality.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/NimeshDilhara" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/nimeshdilhara" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:nimesh@example.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="profile-card">
+          <div class="profile-image">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face" alt="Nimesh Dilhara">
+          </div>
+          <div class="floating-elements">
+            <div class="floating-element" data-speed="2">💻</div>
+            <div class="floating-element" data-speed="3">🚀</div>
+            <div class="floating-element" data-speed="1.5">⚡</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
   </section>
 
   <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am an undergraduate software engineer passionate about web development and AI projects. I love building innovative solutions.</p>
-    <h3>Skills</h3>
-    <ul class="skills">
-      <li>HTML/CSS/JS</li>
-      <li>React & MERN Stack</li>
-      <li>AI & Machine Learning</li>
-      <li>PHP & MySQL</li>
-    </ul>
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Crafting digital solutions with passion and precision</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <p class="about-description">
+            I'm an undergraduate software engineer with a deep passion for creating innovative web applications 
+            and AI-powered solutions. My journey in technology is driven by curiosity and a commitment to 
+            continuous learning.
+          </p>
+          <p class="about-description">
+            With expertise spanning full-stack development, I enjoy tackling complex challenges and 
+            transforming ideas into elegant, user-friendly applications that make a real impact.
+          </p>
+          <div class="stats">
+            <div class="stat-item">
+              <h3>10+</h3>
+              <p>Projects Completed</p>
+            </div>
+            <div class="stat-item">
+              <h3>2+</h3>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat-item">
+              <h3>100%</h3>
+              <p>Client Satisfaction</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <div class="about-card">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=400&fit=crop" alt="Coding workspace">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-subtitle">Tools and technologies I work with</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-html5"></i>
+              <span>HTML5</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-css3-alt"></i>
+              <span>CSS3</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-js"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-react"></i>
+              <span>React</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fab fa-node-js"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database"></i>
+              <span>MongoDB</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-php"></i>
+              <span>PHP</span>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-server"></i>
+              <span>MySQL</span>
+            </div>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>AI & Tools</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="fas fa-brain"></i>
+              <span>Machine Learning</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-python"></i>
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-git-alt"></i>
+              <span>Git</span>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-docker"></i>
+              <span>Docker</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects">
-    <h2>My Projects</h2>
-    <div class="projects-container">
-      <div class="project-card">
-        <img src="images/project1.png" alt="Project 1">
-        <h3>NextGen Sports Club</h3>
-        <p>Advanced sports management platform using MERN stack.</p>
-        <a href="https://github.com/NimeshDilhara/NextgensportclubSystem" target="_blank">GitHub</a>
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Showcasing my latest work and achievements</p>
       </div>
-      <!-- Add more project cards -->
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop" alt="NextGen Sports Club">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/NimeshDilhara/NextgensportclubSystem" target="_blank" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>NextGen Sports Club</h3>
+            <p>Advanced sports management platform built with MERN stack featuring real-time updates, member management, and analytics dashboard.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node.js</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">Express</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop" alt="E-Commerce Platform">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>E-Commerce Platform</h3>
+            <p>Full-featured online shopping platform with payment integration, inventory management, and admin dashboard.</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Stripe</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop" alt="AI Assistant">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="#" class="project-link">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="project-link">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-content">
+            <h3>AI-Powered Assistant</h3>
+            <p>Intelligent chatbot with natural language processing capabilities, integrated with modern web interface.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">TensorFlow</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">FastAPI</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:nimesh@example.com">nimesh@example.com</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/nimeshdilhara" target="_blank">linkedin.com/in/nimeshdilhara</a></p>
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Ready to bring your ideas to life</p>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:nimesh@example.com">nimesh@example.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <h4>LinkedIn</h4>
+              <a href="https://linkedin.com/in/nimeshdilhara" target="_blank">linkedin.com/in/nimeshdilhara</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <h4>GitHub</h4>
+              <a href="https://github.com/NimeshDilhara" target="_blank">github.com/NimeshDilhara</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <span>Colombo, Sri Lanka</span>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm">
+            <div class="form-group">
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Nimesh Dilhara. All rights reserved.</p>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>&copy; 2025 Nimesh Dilhara. All rights reserved.</p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-social">
+            <a href="https://github.com/NimeshDilhara" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/nimeshdilhara" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:nimesh@example.com"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>
