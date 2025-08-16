@@ -920,7 +920,7 @@ body {
   border-radius: var(--radius-md);
   font-size: 1rem;
   font-family: inherit;
-  color: var(--dark); /* Change to var(--white) for white text */
+  color: #0c0c0c;
   background: var(--light-dark);
   transition: border 0.2s, box-shadow 0.2s;
   box-shadow: var(--shadow-sm);
