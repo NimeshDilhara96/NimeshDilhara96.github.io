@@ -431,6 +431,21 @@ body {
   animation: bounce 2s infinite;
 }
 
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  background: var(--gray);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
 /* Mobile Responsive Styles */
 @media (max-width: 1024px) {
   .hero-container {

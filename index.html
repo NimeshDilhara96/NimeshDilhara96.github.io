@@ -69,7 +69,9 @@
         <div class="hero-content">
           <div class="hero-badge">👋 Hello, I'm</div>
           <h1 class="hero-title">Nimesh Dilhara</h1>
-          <div class="hero-subtitle">Creative Developer & Problem Solver</div>
+          <div class="hero-subtitle">
+            <span id="typed-text"></span><span class="typing-cursor"></span>
+          </div>
           <p class="hero-description">
             I craft modern, engaging digital experiences with clean code and creative design. 
             Specialized in full-stack web development, AI, and UI/UX.
@@ -137,6 +139,21 @@
           }
         });
       });
+
+      // Typing animation for hero subtitle
+      const text = "Creative Developer & Problem Solver";
+      const typedText = document.getElementById('typed-text');
+      const cursor = document.querySelector('.typing-cursor');
+      let idx = 0;
+
+      function type() {
+        if (idx <= text.length) {
+          typedText.textContent = text.slice(0, idx);
+          idx++;
+          setTimeout(type, 60);
+        }
+      }
+      type();
     </script>
 </body>
 </html>
