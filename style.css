@@ -862,21 +862,41 @@ body {
 .contact-section {
   padding: var(--spacing-3xl) 0 var(--spacing-2xl) 0;
   background: var(--light);
+  display: flex;
+  justify-content: center;
 }
 
 .contact-container {
-  max-width: 500px;
+  max-width: 520px;
   margin: 0 auto;
   background: var(--white);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  padding: var(--spacing-2xl) var(--spacing-xl);
+  box-shadow: 0 8px 32px rgba(99,102,241,0.10), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: var(--spacing-3xl) var(--spacing-2xl);
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid var(--light-dark);
+}
+
+.contact-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-primary);
+  opacity: 0.06;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-container > * {
+  position: relative;
+  z-index: 1;
 }
 
 .contact-description {
   color: var(--gray);
-  font-size: 1.1rem;
+  font-size: 1.13rem;
   margin-bottom: var(--spacing-xl);
 }
 
@@ -922,6 +942,7 @@ body {
   align-self: flex-end;
   min-width: 160px;
   margin-top: var(--spacing-sm);
+  box-shadow: var(--shadow-sm);
 }
 
 .contact-social {
