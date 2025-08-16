@@ -313,15 +313,24 @@
       }
       typeLines();
 
-      // Auto-fill Projects section from GitHub repo links
+      // Fetch and display GitHub projects from data-repos attribute
       async function loadGitHubProjects() {
         const grid = document.getElementById('projects-grid');
         if (!grid) return;
-        const repoLinks = JSON.parse(grid.getAttribute('data-repos'));
+        let repoLinks;
+        try {
+          repoLinks = JSON.parse(grid.getAttribute('data-repos'));
+        } catch {
+          grid.innerHTML = '<p>Invalid project data.</p>';
+          return;
+        }
+        if (!Array.isArray(repoLinks) || repoLinks.length === 0) {
+          grid.innerHTML = '<p>No projects found.</p>';
+          return;
+        }
         grid.innerHTML = '<p>Loading projects...</p>';
 
         const cards = await Promise.all(repoLinks.map(async (url) => {
-          // Extract username and repo name from URL
           const match = url.match(/github\.com\/([^\/]+)\/([^\/]+)/);
           if (!match) return '';
           const [_, username, repo] = match;
@@ -330,7 +339,6 @@
             const res = await fetch(apiUrl);
             if (!res.ok) throw new Error();
             const data = await res.json();
-            // Use GitHub Open Graph image for a nice preview
             const image = `https://opengraph.githubassets.com/1/${username}/${repo}`;
             return `
               <div class="project-card">
@@ -347,9 +355,10 @@
           }
         }));
 
-        grid.innerHTML = cards.join('') || '<p>No projects found.</p>';
+        grid.innerHTML = cards.filter(Boolean).join('') || '<p>No projects found.</p>';
       }
 
+      // Call the function on page load
       loadGitHubProjects();
     </script>
 </body>
