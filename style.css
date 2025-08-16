@@ -2254,6 +2254,31 @@ section {
   }
 }
 
+/* --- Hero Section Mobile Fix --- */
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr !important;
+    gap: var(--spacing-xl);
+    text-align: center;
+  }
+  .hero-content, .hero-visual {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .hero-visual {
+    margin-top: var(--spacing-xl);
+    order: -1;
+  }
+  .main-card {
+    margin: 0 auto;
+  }
+  .profile-photo {
+    width: 100px;
+    margin: 16px auto;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
     padding: 0 var(--spacing-md);
