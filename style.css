@@ -718,10 +718,7 @@ body {
 }
 
 .about-content p {
-  font-size: 1.1rem;
-  color: var(--gray);
-  margin-bottom: var(--spacing-lg);
-  line-height: 1.7;
+  text-align: justify;
 }
 
 .about-content .section-title {
