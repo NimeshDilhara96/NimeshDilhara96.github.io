@@ -371,13 +371,24 @@ body {
     flex-direction: column;
     gap: 32px;
     text-align: center;
+    padding: 32px 8px;
   }
   .hero-visual {
-    margin-top: 16px;
+    margin-top: 0;
+    margin-bottom: 16px;
   }
   .profile-photo {
     width: 120px;
     height: 120px;
+  }
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 12px;
   }
 }
 
