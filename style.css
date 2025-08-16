@@ -2330,36 +2330,6 @@ section {
   }
 }
 
-/* Hero Section Responsive Layout */
-.hero-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 48px;
-}
-
-@media (max-width: 900px) {
-  .hero-container {
-    flex-direction: column;
-    gap: 32px;
-    text-align: center;
-  }
-  .hero-visual, .hero-content {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
-  .main-card {
-    margin: 0 auto;
-  }
-  .profile-photo {
-    width: 120px;
-    margin: 0 auto 16px auto;
-    display: block;
-  }
-}
-
 /* Utility Classes */
 .sr-only {
   position: absolute;
