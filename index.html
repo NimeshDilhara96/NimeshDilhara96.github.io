@@ -140,10 +140,9 @@
         });
       });
 
-      // Typing animation for hero subtitle
+      // Typing animation for hero subtitle (loops forever)
       const text = "Creative Developer & Problem Solver";
       const typedText = document.getElementById('typed-text');
-      const cursor = document.querySelector('.typing-cursor');
       let idx = 0;
 
       function type() {
@@ -151,6 +150,12 @@
           typedText.textContent = text.slice(0, idx);
           idx++;
           setTimeout(type, 60);
+        } else {
+          setTimeout(() => {
+            idx = 0;
+            typedText.textContent = "";
+            setTimeout(type, 500); // pause before restarting
+          }, 1200); // pause after typing
         }
       }
       type();
