@@ -806,81 +806,96 @@ body {
   background: var(--light);
 }
 
-.tech-modern-grid {
+.tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: var(--spacing-xl);
+  justify-items: center;
+  align-items: stretch;
   margin-top: var(--spacing-xl);
 }
 
-.tech-modern-card {
-  background: var(--white);
-  border-radius: var(--radius-lg);
-  box-shadow: 0 4px 24px 0 rgba(99,102,241,0.07), 0 1.5px 4px 0 rgba(0,0,0,0.03);
+.tech-item {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
   padding: var(--spacing-xl) var(--spacing-md);
-  transition: transform 0.18s var(--transition-bounce), box-shadow 0.18s var(--transition-bounce);
+  transition: transform 0.22s var(--transition-bounce), box-shadow 0.22s;
+  font-weight: 600;
+  font-size: 1.05rem;
+  min-height: 140px;
   position: relative;
   overflow: hidden;
   cursor: pointer;
 }
 
-.tech-modern-card::before {
-  content: "";
+.tech-item::before {
+  content: '';
   position: absolute;
   inset: 0;
   background: var(--gradient-primary);
   opacity: 0;
-  transition: opacity 0.2s;
+  transition: opacity 0.22s;
   z-index: 0;
+  border-radius: var(--radius-lg);
 }
 
-.tech-modern-card:hover,
-.tech-modern-card:focus {
-  transform: translateY(-6px) scale(1.04);
-  box-shadow: 0 8px 32px 0 rgba(99,102,241,0.13), 0 3px 8px 0 rgba(0,0,0,0.06);
+.tech-item:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: var(--shadow-xl), var(--shadow-glow);
 }
 
-.tech-modern-card:hover::before,
-.tech-modern-card:focus::before {
+.tech-item:hover::before {
   opacity: 0.08;
 }
 
-.tech-modern-card i {
+.tech-item i {
   font-size: 2.7rem;
   margin-bottom: var(--spacing-sm);
   z-index: 1;
-  transition: transform 0.2s;
 }
 
-.tech-modern-card:hover i,
-.tech-modern-card:focus i {
-  transform: scale(1.15) rotate(-6deg);
-}
-
-.tech-modern-card span {
-  font-size: 1.08rem;
+.tech-item span {
+  margin-top: var(--spacing-xs);
   color: var(--primary-dark);
-  font-weight: 600;
+  font-size: 1.08rem;
   letter-spacing: 0.5px;
   z-index: 1;
+  text-align: center;
 }
 
-@media (max-width: 700px) {
-  .tech-modern-grid {
+@media (max-width: 900px) {
+  .tech-grid {
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: var(--spacing-lg);
+  }
+  .tech-item {
+    padding: var(--spacing-lg) var(--spacing-xs);
+    font-size: 1rem;
+    min-height: 110px;
+  }
+  .tech-item i {
+    font-size: 2.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .technologies-section {
+    padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
+  }
+  .tech-grid {
     gap: var(--spacing-md);
   }
-  .tech-modern-card {
-    padding: var(--spacing-lg) var(--spacing-xs);
-  }
-  .tech-modern-card i {
-    font-size: 2rem;
-  }
-  .tech-modern-card span {
+  .tech-item {
+    padding: var(--spacing-md) var(--spacing-xs);
     font-size: 0.98rem;
+    min-height: 90px;
+  }
+  .tech-item i {
+    font-size: 1.5rem;
   }
 }
 
