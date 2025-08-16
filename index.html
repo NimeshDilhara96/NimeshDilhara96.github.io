@@ -279,25 +279,45 @@
         });
       });
 
-      // Typing animation for hero subtitle (loops forever)
-      const text = "Creative Developer & Problem Solver";
+      // Typing animation for hero subtitle (multiple lines, loops forever)
+      const lines = [
+        "Undergraduate Software Engineer",
+        "Creative Developer & Problem Solver",
+        "Frontend Developer 💻",
+        "Backend Developer 🔧",
+        "Full Stack Developer 🚀",
+        "From Beautiful Sri Lanka 🇱🇰",
+        "Always Learning & Creating ✨",
+        "Call me Green 🌱"
+      ];
       const typedText = document.getElementById('typed-text');
-      let idx = 0;
+      let lineIdx = 0;
+      let charIdx = 0;
+      let isDeleting = false;
 
-      function type() {
-        if (idx <= text.length) {
-          typedText.textContent = text.slice(0, idx);
-          idx++;
-          setTimeout(type, 60);
+      function typeLines() {
+        const currentLine = lines[lineIdx];
+        if (!isDeleting) {
+          typedText.textContent = currentLine.slice(0, charIdx);
+          if (charIdx < currentLine.length) {
+            charIdx++;
+            setTimeout(typeLines, 60);
+          } else {
+            setTimeout(() => { isDeleting = true; typeLines(); }, 1200);
+          }
         } else {
-          setTimeout(() => {
-            idx = 0;
-            typedText.textContent = "";
-            setTimeout(type, 500); // pause before restarting
-          }, 1200); // pause after typing
+          typedText.textContent = currentLine.slice(0, charIdx);
+          if (charIdx > 0) {
+            charIdx--;
+            setTimeout(typeLines, 30);
+          } else {
+            isDeleting = false;
+            lineIdx = (lineIdx + 1) % lines.length;
+            setTimeout(typeLines, 500);
+          }
         }
       }
-      type();
+      typeLines();
 
       // Auto-fill Projects section from GitHub repo links
       async function loadGitHubProjects() {
