@@ -182,11 +182,7 @@
     <section id="projects" class="projects-section">
       <div class="container">
         <h2 class="section-title">Projects</h2>
-        <div class="projects-grid" id="projects-grid"
-          data-repos='[
-            "https://github.com/NimeshDilhara96/NextGen-Sport-Club-Management-System",
-            "https://github.com/NimeshDilhara96/Nutricare-Meal_Management_System"
-          ]'>
+        <div class="projects-grid" id="projects-grid">
           <!-- Project cards will be injected here -->
         </div>
       </div>
@@ -360,6 +356,36 @@
 
       // Call the function on page load
       loadGitHubProjects();
+
+      async function loadProjectsFromJson() {
+        const grid = document.getElementById('projects-grid');
+        if (!grid) return;
+        grid.innerHTML = '<p>Loading projects...</p>';
+        try {
+          const res = await fetch('assets/projects.json');
+          const projects = await res.json();
+          if (!Array.isArray(projects) || projects.length === 0) {
+            grid.innerHTML = '<p>No projects found.</p>';
+            return;
+          }
+          const cards = projects.map(data => `
+            <div class="project-card">
+              <img src="${data.image}" alt="${data.name}" class="project-image">
+              <div class="project-content">
+                <h3 class="project-title">${data.name}</h3>
+                <p class="project-desc">${data.description || "No description provided."}</p>
+                <a href="${data.html_url}" class="btn btn-outline" target="_blank">View Project</a>
+              </div>
+            </div>
+          `);
+          grid.innerHTML = cards.join('');
+        } catch {
+          grid.innerHTML = '<p>Failed to load projects.</p>';
+        }
+      }
+
+      // Call the function on page load
+      loadProjectsFromJson();
     </script>
 </body>
 </html>
