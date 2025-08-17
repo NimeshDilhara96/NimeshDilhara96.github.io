@@ -135,7 +135,7 @@
         <div class="education-list">
           <div class="education-card">
             <div class="education-logo">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Esoft_Metro_Campus_logo.png" alt="ESOFT Metro Campus Logo">
+              <img src="https://esu.lk/_next/image?url=%2Fimages%2Flogo%2Fesu-header.png&w=256&q=75" alt="ESOFT Metro Campus Logo">
             </div>
             <div class="education-details">
               <h3 class="education-institute">ESOFT Metro Campus</h3>
@@ -428,8 +428,10 @@
       window.addEventListener('load', function() {
     const loader = document.getElementById('site-loader');
     if(loader) {
-      loader.classList.add('hide');
-      setTimeout(() => loader.style.display = 'none', 600);
+      setTimeout(() => {
+        loader.classList.add('hide');
+        setTimeout(() => loader.style.display = 'none', 700);
+      }, 6000); // Show loader for 6 seconds
     }
   });
     </script>
