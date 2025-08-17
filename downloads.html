@@ -82,7 +82,32 @@
   </footer>
 
   <script>
-    // If you have shared navigation/footer JS, include it here as in index.html
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navToggle.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
   </script>
 </body>
 </html>
