@@ -1133,6 +1133,58 @@ body {
   }
 }
 
+/* Coding background animation for hero */
+.coding-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.code-float {
+  position: absolute;
+  font-size: 1.2rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  color: rgba(0,245,212,0.13);
+  font-weight: 700;
+  user-select: none;
+  opacity: 0.7;
+  animation: code-float-move 8s linear infinite;
+  white-space: nowrap;
+}
+
+.code-float:nth-child(1) { left: 10%; top: 80%; font-size: 2.2rem; animation-delay: 0s;}
+.code-float:nth-child(2) { left: 25%; top: 90%; font-size: 1.7rem; animation-delay: 1.2s;}
+.code-float:nth-child(3) { left: 40%; top: 85%; font-size: 2.1rem; animation-delay: 2.4s;}
+.code-float:nth-child(4) { left: 60%; top: 95%; font-size: 1.5rem; animation-delay: 3.1s;}
+.code-float:nth-child(5) { left: 75%; top: 88%; font-size: 1.8rem; animation-delay: 4.2s;}
+.code-float:nth-child(6) { left: 85%; top: 92%; font-size: 1.3rem; animation-delay: 5.1s;}
+.code-float:nth-child(7) { left: 55%; top: 98%; font-size: 1.9rem; animation-delay: 2.7s;}
+.code-float:nth-child(8) { left: 33%; top: 93%; font-size: 1.4rem; animation-delay: 3.8s;}
+.code-float:nth-child(9) { left: 70%; top: 97%; font-size: 1.6rem; animation-delay: 1.9s;}
+.code-float:nth-child(10) { left: 15%; top: 94%; font-size: 1.5rem; animation-delay: 4.7s;}
+
+@keyframes code-float-move {
+  0% {
+    transform: translateY(0) scale(1) rotate(-8deg);
+    opacity: 0.7;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.2) rotate(8deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .code-float {
+    font-size: 0.9rem !important;
+  }
+}
+
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   :root {
