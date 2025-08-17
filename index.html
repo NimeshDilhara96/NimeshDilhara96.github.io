@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Loader -->
+  <div id="site-loader" class="site-loader">
+    <span class="logo-text loader-logo">Nimesh<span style="color:var(--primary);">.</span></span>
+  </div>
+
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
       <div class="nav-container">
@@ -91,7 +96,7 @@
             <a href="https://linkedin.com/in/nimeshdilhara" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
             <a href="https://instagram.com/nimeshdilhara96" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/nimesh.dilhara.96" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="https://facebook.com/nimesh.dilhara.96" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
           </div>
         </div>
         <div class="hero-visual">
@@ -112,12 +117,43 @@
            Hi! I'm <strong>Nimesh Dilhara</strong>, a passionate <strong>BSc (Hons) Software Engineering</strong> undergraduate with a strong interest in building modern, user-friendly web applications.  
            My expertise spans full-stack development, AI, and UI/UX design. I thrive on solving real-world problems, exploring new technologies, and collaborating on innovative projects that make an impact.
           </p>
+          <br>
           <ul class="about-list">
             <li><i class="fas fa-code"></i> Full-Stack Web Development</li>
             <li><i class="fas fa-brain"></i> Artificial Intelligence Enthusiast</li>
             <li><i class="fas fa-paint-brush"></i> UI/UX Design</li>
             <li><i class="fas fa-users"></i> Team Player & Mentor</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+      <div class="container education-container">
+        <h2 class="section-title">Education</h2>
+        <div class="education-list">
+          <div class="education-card">
+            <div class="education-logo">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Esoft_Metro_Campus_logo.png" alt="ESOFT Metro Campus Logo">
+            </div>
+            <div class="education-details">
+              <h3 class="education-institute">ESOFT Metro Campus</h3>
+              <div class="education-degree">Bachelor of Information (Honours) Degree, Information Technology</div>
+              <div class="education-duration">Oct 2022 - Dec 2026</div>
+            </div>
+          </div>
+          <div class="education-card">
+            <div class="education-logo">
+              <!-- You can use a placeholder or your school logo if available -->
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/School_icon.png" alt="K/galigamuwa Central College Logo">
+            </div>
+            <div class="education-details">
+              <h3 class="education-institute">K/galigamuwa Central College</h3>
+              <div class="education-degree">Engineering Technology, Engineering</div>
+              <div class="education-duration">2018 - 2020</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -208,7 +244,6 @@
     </form>
     <div class="contact-social">
       <a href="mailto:nimeshdilhara2001@gmail.com" class="social-link" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/NimeshDilhara96" target="_blank" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
       <a href="https://instagram.com/nimeshdilhara96" target="_blank" class="social-link" title="Instagram"><i class="fab fa-instagram"></i></a>
       <a href="https://linkedin.com/in/nimeshdilhara" target="_blank" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
@@ -389,6 +424,14 @@
 
       // Call the function on page load
       loadProjectsFromJson();
+
+      window.addEventListener('load', function() {
+    const loader = document.getElementById('site-loader');
+    if(loader) {
+      loader.classList.add('hide');
+      setTimeout(() => loader.style.display = 'none', 600);
+    }
+  });
     </script>
 </body>
 </html>

@@ -1144,3 +1144,125 @@ body {
     justify-content: center;
   }
 }
+
+/* Site Loader Styles */
+.site-loader {
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+.site-loader.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.loader-logo {
+  font-family: var(--font-primary);
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--primary-dark);
+  display: inline-block;
+  animation: loader-bounce 1.2s infinite;
+}
+
+@keyframes loader-bounce {
+  0%, 100% { transform: translateY(0);}
+  50% { transform: translateY(-18px);}
+}
+
+@media (max-width: 600px) {
+  .loader-logo {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Education Section Styles */
+.education-section {
+  padding: var(--spacing-3xl) 0;
+  background: var(--light);
+}
+
+.education-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.education-card {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-xl);
+  gap: var(--spacing-xl);
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+
+.education-card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.education-logo img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: var(--radius-md);
+  background: var(--light-dark);
+  box-shadow: var(--shadow-sm);
+}
+
+.education-details {
+  flex: 1;
+}
+
+.education-institute {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-degree {
+  font-size: 1.05rem;
+  color: var(--gray);
+  margin-bottom: var(--spacing-xs);
+}
+
+.education-duration {
+  font-size: 0.98rem;
+  color: var(--gray-light);
+}
+
+@media (max-width: 700px) {
+  .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+  }
+  .education-logo img {
+    width: 50px;
+    height: 50px;
+  }
+  .education-institute {
+    font-size: 1.05rem;
+  }
+}
